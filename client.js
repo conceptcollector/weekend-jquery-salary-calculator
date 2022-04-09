@@ -2,15 +2,10 @@ $(document).ready(onReady);
 
 function onReady(){
     $('#submitButton').on('click', employeeAppender);
+    $('#submitButton').on('click', monthlySalaryCalculator)
 }
 
-// let newEmployee = {
-//     firstName: $('#firstName').val(),
-//     lastName: $('#lastName').val(),
-//     idNumber: $('#idNumber').val(),
-//     jobTitle: $('#jobTitle').val(),
-//     annualSalary: $('#annualSalary').val()
-// }
+let monthlySalary = 0;
 
 function employeeAppender(){
     $('.employeeDetails').append(`<tr>
@@ -20,4 +15,9 @@ function employeeAppender(){
     <td>${$('#jobTitle').val()}</td>
     <td>${$('#annualSalary').val()}</td>
     </tr>`);
+}
+
+function monthlySalaryCalculator(){
+    monthlySalary += $('#annualSalary').val() / 12;
+    $('#salaryTotal').append(monthlySalary.toFixed(2));
 }
