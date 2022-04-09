@@ -18,7 +18,7 @@ h1 {
         "sidebar"
         "footer";
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1.25fr 2fr 1.25fr;
+    grid-template-rows: auto 1fr auto;
 }
 
 .one {
@@ -29,9 +29,9 @@ form {
     background-color: gray;
     grid-area: "sidebar";
     display: flex;
-    flex: 0 0 100%;
     flex-direction: column;
     justify-content: center;
+    min-height: 100;
 }
 
 table {
