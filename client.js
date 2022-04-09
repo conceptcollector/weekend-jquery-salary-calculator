@@ -15,9 +15,11 @@ function employeeAppender(){
     <td>${$('#jobTitle').val()}</td>
     <td>${$('#annualSalary').val()}</td>
     </tr>`);
+    monthlySalary += parseInt($('#annualSalary').val() / 12);
+    $('.inputs').val('');
 }
 
-function monthlySalaryCalculator(){
-    monthlySalary += $('#annualSalary').val() / 12;
+function monthlySalaryCalculator(){;
+    $('#salaryTotal').empty();
     $('#salaryTotal').append(monthlySalary.toFixed(2));
 }
