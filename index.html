@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="client.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>jQuery Salary Calculator</title>
 </head>
 <body>
     <h1>Salary Calculator</h1>
-    <div class="grid-container">
-        <table class="">
-
-        </table>
+    <div class="wrapper">
+        <div>
+            <table>
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID Number</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <form class="two" style=>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="number" placeholder="ID Number">
+            <input type="text" placeholder="Job Title">
+            <input type="number" placeholder="Annual Salary">
+            <button id="submitButton">Submit</button>
+        </form>
     </div>
-    
+    <footer>Employee Salary Total: <span id="salaryTotal"></span></footer>
 </body>
 </html>
