@@ -22,4 +22,7 @@ function employeeAppender(){
 function monthlySalaryCalculator(){;
     $('#salaryTotal').empty();
     $('#salaryTotal').append(monthlySalary.toFixed(2));
+    if (monthlySalary >= 20000) {
+        $('footer').css({"background-color": "black", "color": "red"});
+    }
 }
