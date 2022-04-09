@@ -1,5 +1,8 @@
 body {
     margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 h1 {
@@ -12,21 +15,14 @@ h1 {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
-.one {
-    grid-area: "content";
+    grid-template-columns: 3fr 1fr;
 }
 
 .two {
-    background-color: gray;
-    grid-area: "sidebar";
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: gray;
 }
 
 table {
@@ -44,11 +40,29 @@ th {
     width: 100px;
 }
 
+.inputs {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black 1px;
+}
+
+#submitButton {
+    width: 25%;
+    height: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    background-color: salmon;
+    color: gray;
+    font-weight: bold;
+    border: solid black 1px;
+}
+
 footer {
     background-color: salmon;
     color: gray;
     font-size: 27px;
     font-weight: 600;
     padding: 30px;
-    grid-area: "footer";
 }
