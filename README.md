@@ -1,9 +1,10 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+jQuery Salary Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Take employee information, calculate the employee's monthly salary based on annual salary as a baseline.
+Return the total monthly salary for all entered employees.
+When the monthly salary exceeds $20,000.00, the color scheme changes.
+Employee information can be deleted out of the table and the color scheme will return to normal once the monthly salary drops below $20,000 again.
