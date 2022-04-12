@@ -7,13 +7,6 @@ function onReady(){
 }
 
 let monthlySalary = 0;
-let newEmployee = {
-    firstName: $('#firstName').val(),
-    lastName: $('#lastName').val(),
-    idNumber: $('#idNumber').val(),
-    jobTitle: $('#jobTitle').val(),
-    annualSalary: $('#annualSalary').val()
-}
 
 function employeeAppender(){
     $('.employeeDetails').append(`<tr>
@@ -31,8 +24,7 @@ function employeeAppender(){
 }
 
 function monthlySalaryCalculator(){;
-    $('#salaryTotal').empty();
-    $('#salaryTotal').append(monthlySalary.toFixed(2));
+    $('#salaryTotal').text(monthlySalary.toFixed(2));
     if (monthlySalary >= 20000) {
         $('footer').css({"background-color": "black", "color": "red"});
         $('#bottomLine').css({"background-color": "black", "color": "red"});
@@ -44,8 +36,7 @@ function deleteEmployee() {
     let negativeSalary = $(this).closest('tr').children('td.salary').text();
     $(this).closest("tr").remove();
     monthlySalary -= (negativeSalary / 12);
-    $('#salaryTotal').empty();
-    $('#salaryTotal').append(monthlySalary.toFixed(2));
+    $('#salaryTotal').text(monthlySalary.toFixed(2));
     if (monthlySalary < 20000) {
         $('footer').css({"background-color": "salmon", "color": "gray"});
         $('#bottomLine').css({"background-color": "gray", "color": "white"});
